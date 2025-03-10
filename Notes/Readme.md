@@ -1029,4 +1029,166 @@ By applying pairwise testing, testers can efficiently validate system behavior w
 **Gaining Expertise**
 
 - Experience helps in identifying the best techniques for different systems
-- Continued practice improves testing skills
+- Continued practice improves testing skill
+
+
+
+## Testing Case Writing [Beginner]
+
+### How to Write a Test Case
+
+In this section, we will begin talking about how to write a test case. We will start by identifying what a test case is, why we write it, and then explore how it is written. After this, we will use a testing tool to write our test cases.
+
+Test case writing is one of the most important skills for a software tester. Most testing projects include writing test cases. Sometimes, we create test cases from test scenarios.
+
+- **Step 1:** Write test scenarios (as done in the previous section).
+- **Step 2:** Write test cases directly without writing test scenarios.
+
+### Types of Testing Projects
+
+There are three types of projects regarding test cases:
+
+1. Some projects write only test scenarios and execute them.
+2. Some projects write only test cases and execute them.
+3. Some projects start with test scenarios and clarify them with test cases.
+
+The decision to use scenarios, test cases, or both is made by test managers based on experience and project needs.
+
+### Understanding Test Cases
+
+A **test case** is a document that includes:
+
+- Preconditions
+- Inputs
+- Actions
+- Expected results
+
+![Test Case](Cache/Test_case.png)
+
+#### Differences Between Test Case and Test Scenario
+
+- **Test Scenario:** A one-line condition (e.g., "Verify login").
+- **Test Case:** A detailed document with multiple fields.
+
+If time is limited, writing test scenarios might be preferable. If the project has high risks, writing test cases is more beneficial.
+
+#### Components of a Test Case
+
+##### 1. Title
+
+- Should be **unique**.
+- Should not be **too long** (e.g., three lines) or **too brief** (e.g., "Verify login").
+
+##### 2. Preconditions
+
+- Important for setting up the test environment.
+- Example: "User is already registered using valid credentials."
+- Can include multiple conditions like:
+  - Internet connection availability
+  - Browser updates
+- Some test suites share a common precondition for all test cases.
+
+##### 3. Test Steps
+
+- Steps to execute the test case.
+- Essential for complex systems.
+- Should follow a **consistent format**:
+  - **Second-person format:** "Enter a valid username."
+  - **Third-person format:** "The user enters a valid username."
+- Should not include preconditions in steps.
+- Recommended range: **2 to 9 steps**.
+
+##### 4. Expected Result
+
+- Defines the expected behavior of the system.
+- Example: "User is redirected to the homepage after successful login."
+- Can vary based on business decisions (e.g., redirection to a dashboard, newsfeed, inbox, etc.).
+
+##### 5. Test Suite
+
+- A collection of related test cases.
+- Names vary based on the testing tool:
+  - **Test Suite**
+  - **Test Folder**
+  - **Feature**
+  - **Condition**
+- Example: A "Login" test suite contains test cases related to login functionality.
+
+##### 6. Test Environment
+
+- Specifies where the test will be executed.
+- Critical for cross-platform applications.
+- Example:
+  - "Executed on Windows and Mac."
+  - "Executed on mobile devices (**4G, 5G**)."
+
+This structured approach ensures clarity and consistency in writing test cases, making them effective and manageable in a testing environment.
+
+##### 7. Actual Result
+
+Never fill the actual result field until you execute your test case.
+
+##### 8. Status
+
+Pass, Fail,  Blocked, Skipped, etc.
+
+##### 9.Priority
+
+##### 10.Defect Reporting 
+
+* If discrepancies exist, they are documented and reported.
+
+**Example** 
+**Test Case: Verify Successful Login**
+
+| **Component**        | **Description**                                              |
+| -------------------- | ------------------------------------------------------------ |
+| **Test Case ID**     | TC-001                                                       |
+| **Title**            | Verify Successful Login with Valid Credentials               |
+| **Priority**         | High                                                         |
+| **Preconditions**    | - User is already registered.<br>- Internet connection is available.<br>- Browser is updated to the latest version. |
+| **Test Steps**       | 1.1 Open the login page.<br>1.2 Enter a valid username.<br>1.3 Enter a valid password.<br>1.4 Click on the "Login" button. |
+| **Expected Result**  | - User is redirected to the homepage.<br>- A success message is displayed. |
+| **Test Suite**       | Login Functionality                                          |
+| **Test Environment** | - Windows 11, macOS Ventura.<br>- Chrome (latest), Firefox (latest).<br>- Mobile (Android 13, iOS 17) under Wi-Fi and 4G. |
+| **Actual Result**    | _(To be filled after execution)_                             |
+| **Status**           | _(Pass, Fail, Blocked, Skipped, etc.)_                       |
+| **Defect Reporting** | If discrepancies exist, they are documented and reported.    |
+
+**Notice two things in your test case:**
+
+1. **High-Level vs Low-Level Test Cases**
+   - **High-Level Test Cases**:
+     - Focus on overall functionality without specifying test data.
+     - Suitable for experienced testers.
+     - Provides better system coverage.
+   - **Low-Level Test Cases**:
+     - Includes specific data values.
+     - Useful for critical systems and inexperienced testers.
+2. **Concise vs Detailed Test Steps**
+   - Depending on project needs, test steps can be:
+     - **Detailed**: Each step is explicitly listed.
+     - **Concise**: Grouping steps into general instructions.
+   - The choice depends on the complexity of the system and team experience.
+
+By following this structured approach, test cases become more organized, traceable, and effective in ensuring software quality.
+
+[Tarek Roshdy test case register](https://docs.google.com/spreadsheets/d/1DDWOfdn40_3l4joDKN6w73TdEl-JwTdKwHoDRyZ9gMc/edit?gid=509497296#gid=509497296)
+
+## Test Case Writing using Zephyr Scale
+
+**Note:**
+**Gherkin Script:**
+
+```gherkin
+Given:
+When:
+Then:
+```
+
+[Add Zypher application to your Kanban Jira template and play with it](https://www.atlassian.com/software/jira)
+
+## Data driven testing
+
+![Data Driven Testing](Cache/Data_Driven_Testing.png)
+

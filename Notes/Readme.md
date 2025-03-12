@@ -465,7 +465,7 @@ Imagine you are planning your day with a structured schedule:
 
 - **3:00 PM - 5:00 PM**: Social media and personal time
 
-  ![Equivalence_Partitioning](Cache\Equivalence_Partitioning.png)
+  ![Equivalence_Partitioning](Cache/Equivalence_Partitioning.png)
 
 Now, suppose your friend is responsible for checking whether you are following your schedule. They may randomly check at different times:
 
@@ -593,7 +593,7 @@ Equivalence partitioning helps streamline testing efforts by ensuring each funct
   - Preferred method.
   - Tests the two critical boundary values (last of the previous partition and first of the next partition).
 - **Three-Value Boundary Analysis** (Skipped as it is not deemed essential).
-  ![Boundary Value Analysis](Cache\3-Boundary_Value_Analysis.png)
+  ![Boundary Value Analysis](Cache/3-Boundary_Value_Analysis.png)
 
 **Common Developer Mistakes at Boundaries**
 
@@ -622,7 +622,7 @@ Equivalence partitioning helps streamline testing efforts by ensuring each funct
 
 ###### Example 1: Grading System Partitions
 
-![Boundary_Value_Analysis_Ex](Cache\Boundary_Value_Analysis_Ex.png)
+![Boundary_Value_Analysis_Ex](Cache/Boundary_Value_Analysis_Ex.png)
 
 **Test Cases**
 
@@ -891,7 +891,7 @@ Each **state** is a condition in which the system can rest. Transitions occur wh
 
    
 
-   ![State_Machine_Example](Cache\State_Machine_Example.png)
+   ![State_Machine_Example](Cache/State_Machine_Example.png)
 
 **Coverage Criteria**
 
@@ -1184,6 +1184,7 @@ By following this structured approach, test cases become more organized, traceab
 Given:
 When:
 Then:
+And:
 ```
 
 [Add Zypher application to your Kanban Jira template and play with it](https://www.atlassian.com/software/jira)
@@ -1192,3 +1193,131 @@ Then:
 
 ![Data Driven Testing](Cache/Data_Driven_Testing.png)
 
+## Test Execution & Bug Reporting [ Beginner ]  
+
+### Introduction to Defect Reporting  
+
+Defect reporting is a crucial skill for software testers for two main reasons:  
+
+1. **Primary Documentation** – In many projects, testers use **exploratory testing** instead of writing test cases, making defect reports the first and sometimes the only documentation.  
+2. **Cross-Team Communication** – Defect reports are shared with developers, so they must be clear and detailed to avoid miscommunication and ensure reproducibility.  
+
+### Defect Report Writing
+
+#### What is a Defect Report?
+
+A defect report is a documentation of the occurrence, nature, and status of a defect in an application. It records the details of a problem that causes a difference between expected and actual results. The defect itself is the problem, also referred to as a bug or fault, while the defect report documents and communicates this problem.
+
+#### Importance of a Defect Report
+
+A defect report does not always confirm the existence of a defect. It could arise due to a tester's mistake, an issue in the test environment, or an intended system behavior. Hence, proper documentation is necessary for validation.
+
+#### Components of a Defect/Bug/Fault Report
+
+##### 1. Defect Report Title
+
+- Should be descriptive yet concise.
+
+- Must clearly convey the nature of the defect.
+
+- Avoid vague titles like *Problem with Login*.
+
+  ![Bug_Report_Title](Cache/Bug_Report_Title.png)
+
+##### 2. Steps to Reproduce
+
+- Should be detailed, precise, and use low-level data.
+- Clearly outline the actions needed to recreate the defect.
+- Avoid including prerequisites like opening the browser or turning on the internet.
+- Example:
+  1. Open `someacademy.com`.
+  2. Click on the hamburger icon.
+  3. Scroll to the bottom and click on *Settings*.
+  4. Click on *Data Usage*.
+  5. Change *Data Usage* to *Minimum Limit*.
+
+##### 3. Expected Result
+
+- What should happen based on the requirements or test case.
+- If a test case exists, this field is copied from there.
+
+##### 4. Actual Result
+
+- What actually happened when executing the test steps.
+- The actual result must differ from the expected result to confirm a defect.
+
+##### 5. Test Environment
+
+- Specifies the relevant and only relevant environment variables where the **defect** occurred.
+- Includes relevant elements like:
+  - Operating system (e.g., Windows 11, macOS)
+  - Browser (e.g., Chrome, Firefox)
+  - Hardware (e.g., Intel, HP, Asus)
+  - Network type (e.g., Wi-Fi, 5G, Ethernet)
+  - Server type (e.g., Development, Staging, Production)
+- Example: *iPhone 11, iOS 13, 5G Network, Production Server*.
+
+##### 6. Screenshots or Videos
+
+- Visual proof to assist developers in reproducing the defect.
+- Web application screenshots should capture the entire screen, including the URL.
+- Videos should highlight clicks and interactions.
+- Annotations like red rectangles should be used to highlight issues.
+
+##### 7. Priority and Severity
+
+- Defines the urgency of fixing the defect.
+- Sometimes, priority and severity are separate fields.
+
+By ensuring all these components are included, defect reports become more effective in facilitating the debugging and resolution process.
+
+### Defect Report Example
+
+A complete defect report includes the following details:
+
+| **Field**               | **Description**                                              |
+| ----------------------- | ------------------------------------------------------------ |
+| **Title**               | Example - "Login Forgot Password Button Isn't Working"       |
+| **Steps to Reproduce**  | 1. Click on "Login"2. Click on "Forgot Password"             |
+| **Expected Result**     | The button should be clickable, and the user should be redirected to a page to enter their email. |
+| **Actual Result**       | Clicking on the button has no effect.                        |
+| **Environment**         | Device, operating system, and network details.               |
+| **Severity/Priority**   | Example - "High"                                             |
+| **Defect Type**         | Example - "Functional Defect"                                |
+| **Supporting Evidence** | Screenshots or video recordings.                             |
+
+Testers should use proper defect tracking tools rather than informal methods like PowerPoint or Canva for reporting defects. In the next section, we will explore how to document defects in a professional tool and assign them to team members.
+
+### Types of Defects
+
+#### Functional Defects
+
+Functional defects occur when a functionality does not work as expected. For example, clicking a button that does not perform any action is considered a functional defect.
+
+![Functional_defects](Cache/Functional_defects.png)
+
+#### Visual or UI Defects
+
+These defects are related to the user interface (UI) of the application. An example is a misaligned notification text that should appear behind an element but is instead overlapping it. The severity of UI defects can vary from critical to low priority depending on the application.
+
+![UI_defects](Cache/UI_defects.png)
+
+#### Content Defects
+
+Content defects involve issues with textual content, such as duplicated sentences. For example, if a message appears twice unnecessarily, it is categorized as a content defect.
+
+![Content Defect](Cache\Content_Defect.png)
+
+#### Performance Defects
+
+Performance defects occur when an application is slow or unresponsive. For instance, if a video takes an unusually long time to load, it is considered a performance defect. In such cases, video recordings are often necessary to demonstrate the issue effectively, as screenshots alone cannot capture performance problems.
+
+![Performance Defects](Cache\Performance_Defects.png)
+
+#### Suggestions vs. Defects
+
+Sometimes, testers may provide improvement suggestions rather than reporting actual defects. For example, suggesting that a placeholder font should be larger is an enhancement rather than a defect unless the font is too small to be readable. If the issue significantly affects usability, it may be classified as a defect instead.
+
+### Defect Life cycle
+
+![Bug Life Cycle in Software Development - GeeksforGeeks](Cache/Bug-Defect-Life-Cycle-1.png)

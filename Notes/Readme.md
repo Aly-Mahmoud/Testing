@@ -1321,3 +1321,13 @@ Sometimes, testers may provide improvement suggestions rather than reporting act
 ### Defect Life cycle
 
 ![Bug Life Cycle in Software Development - GeeksforGeeks](Cache/Bug-Defect-Life-Cycle-1.png)
+
+## Testing progress & Test summary Report
+
+### Test Progress report:
+
+A type of test report produced at regular intervals about the progress of test activities against a baseline, risks, and alternatives requiring a decision. Synonyms: test status report 
+
+### Test summary report: 
+
+A type of test report produced at completion milestones that provides an evaluation of the corresponding test items against exit criteria

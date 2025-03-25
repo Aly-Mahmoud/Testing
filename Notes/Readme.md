@@ -471,7 +471,7 @@ Now, suppose your friend is responsible for checking whether you are following y
 
 - At **10:00 AM**, they ask if you are working.
 - At **4:00 PM**, they ask if you are on social media.
-- At **5:00 PM**, they check if you are studying.
+- At **6:00 PM**, they check if you are studying.
 - Similarly, they check at different intervals during other activities.
 
 **Problem with Random Testing**
@@ -1306,13 +1306,13 @@ These defects are related to the user interface (UI) of the application. An exam
 
 Content defects involve issues with textual content, such as duplicated sentences. For example, if a message appears twice unnecessarily, it is categorized as a content defect.
 
-![Content Defect](Cache\Content_Defect.png)
+![Content Defect](Cache/Content_Defect.png)
 
 #### Performance Defects
 
 Performance defects occur when an application is slow or unresponsive. For instance, if a video takes an unusually long time to load, it is considered a performance defect. In such cases, video recordings are often necessary to demonstrate the issue effectively, as screenshots alone cannot capture performance problems.
 
-![Performance Defects](Cache\Performance_Defects.png)
+![Performance Defects](Cache/Performance_Defects.png)
 
 #### Suggestions vs. Defects
 
@@ -1478,9 +1478,9 @@ Deliver working software on a frequent basis at intervals of between a few weeks
 | Adaptability     | Limited                                 | High                                          |
 | Testing Focus    | Ensuring fixed requirements are correct | Iterative adjustments based on evolving needs |
 
-Agile flips the traditional approach by focusing on available resources and time first, then adapting the requirements accordingly, while sequential development fixes requirements first and estimates effort and timeline based on them.
+Agile flips the traditional approach by foctusing on available resources and time first, then adapting the requirements accordingly, while sequential development fixes requirements first and estimates effort and timeline based on them.
 
-![Sequential_Dev_vs_Agile](Cache\SequentialDev_vs_Agile.png)
+![Sequential_Dev_vs_Agile](Cache/SequentialDev_vs_Agile.png)
 
 ### Whole Team Approach
 
@@ -2892,3 +2892,7 @@ White box testing includes various techniques to achieve different levels of cod
 - **Path Coverage**
 - **MCDC (Modified Condition/Decision Coverage)**
 - **Other Advanced Techniques**
+
+
+
+![image-20250325023353269](Cache/image-20250325023353269.png)
